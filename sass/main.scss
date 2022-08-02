@@ -1,0 +1,31 @@
+// VARS
+@import "./utils/variables";
+
+// RESET + BASE 
+@import "./components/reset_style/reset";
+@import "./components/base_style/base";
+
+
+@import "./components/base_style/btn";
+@import "./components/base_style/modal";
+@import "./components/base_style/logo";
+@import "./components/base_style/social-block";
+
+
+// HEADER + FOOTER 
+@import "./components/header_style/header";
+@import "./components/footer_style/footer";
+
+
+// PAGE STUDIA
+@import "./components/page_studia_style/hero";
+@import "./components/page_studia_style/features";
+@import "./components/page_studia_style/about";
+@import "./components/page_studia_style/team";
+@import "./components/page_studia_style/clients";
+
+
+// PAGE PORTFOLIO
+@import "./components/page_portfolio_style/portfolio"
+
+

@@ -1,0 +1,100 @@
+.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: $dark-bg-cl;
+}
+
+.footer_container {
+    display: flex;
+    align-items: baseline;
+}
+
+.footer__logo {
+    margin-bottom: 20px;
+
+    color: $text-white-cl;
+}
+
+
+.footer__uppertitle {
+    color: $text-white-cl;
+    margin-bottom: 20px;
+}
+
+.footer__social {
+    margin-left: 70px;
+    margin-right: 93px;
+}
+
+
+// CONTACTS BLOCK 
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: calc(24 / 14);
+    letter-spacing: 0.03em;
+}
+
+.contacts__address {
+    color: $text-white-cl;
+}
+
+.contacts__link {
+    color: $footer-mail-phone-cl;
+    transition: color $animation;
+
+    &:focus,
+    &:hover {
+        color: $text-white-cl;
+    }
+}
+
+
+// FOOTER FORM 
+
+
+.form-footer__uppertitle {
+    display: block;
+}
+
+.form-footer__label {
+    display: inline-flex;
+    align-items: center;
+}
+
+.form-footer__imput {
+    width: 358px;
+    height: 50px;
+    padding: 15px 16px;
+
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+
+    margin-right: 12px;
+    outline: none;
+
+    transition: border $animation-modal;
+
+    &:focus,
+    &:not(:placeholder-shown) {
+        color: $text-white-cl;
+        border: 1px solid $text-white-cl;
+    }
+
+    &::placeholder {
+        color: $footer-mail-phone-cl;
+        transition: transform $animation;
+    }
+
+    &:focus::placeholder {
+        transform: translateX(280px);
+    }
+}

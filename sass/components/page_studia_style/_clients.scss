@@ -1,0 +1,26 @@
+.clients__list {
+    justify-content: center;
+}
+
+.clients__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 92px;
+    border: 1px solid $icon-color;
+    border-radius: 4px;
+    color: $icon-color;
+    transition: color $animation, border $animation;
+
+    &:hover,
+    &:focus {
+            border: 1px solid $text-accent-cl;
+            color: $text-accent-cl;
+        }
+}
+
+
+.clients__icon {
+    fill: currentColor;
+}

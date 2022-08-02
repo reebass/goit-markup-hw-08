@@ -1,0 +1,34 @@
+.social__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background-color: $text-white-cl;
+    border-radius: 50%;
+    color: $icon-color;
+    transition: color $animation, background-color $animation;
+
+    &--dark {
+            background-color: $footer-socials-bg;
+            color: $text-white-cl;
+        }
+    
+    &:hover,
+    &:focus {
+            color: $text-white-cl;
+            background-color: $text-accent-cl;
+        }
+}
+
+
+.social__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.social__icon {
+    fill: currentColor;
+}

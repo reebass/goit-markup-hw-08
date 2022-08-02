@@ -1,0 +1,15 @@
+.logo {
+    display: block;
+    font-family: $fonts-logo;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: calc(31 / 26);
+    letter-spacing: 0.03em;
+    color: $text-nav-cl;
+    margin-right: 93px;
+
+    &__left-side {
+            color: $text-accent-cl;
+        }
+}
+
