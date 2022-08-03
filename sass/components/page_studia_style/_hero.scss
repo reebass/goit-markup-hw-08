@@ -1,34 +1,21 @@
-.hero {
-    min-height: 600px;
-    max-width: 1600px;
-    /* outline: 1px solid red; */
-    background-image: linear-gradient(to right,
-            rgba(47, 48, 58, 0.4),
-            rgba(47, 48, 58, 0.4)),
-        url(../images/index/hero.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: $dark-bg-cl;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .hero__container {
-    padding-top: 200px;
-    padding-bottom: 200px;
+    background-color: grey;
+    height: 400px;
+    padding: 118px 0;
 }
 
 .hero__title {
+    margin-bottom: 30px;
+
     font-weight: 900;
-    font-size: 44px;
-    line-height: calc(60 / 44);
+    font-size: 26px;
+    line-height: calc(42 / 26);
+    text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+
     color: $text-white-cl;
-    text-align: center;
-    width: 696px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 30px;
 }
+
+
+

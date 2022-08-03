@@ -1,3 +1,39 @@
+.btn-mobile-menu {
+    display: inline-flex;
+    padding: 0;
+    margin: 10px 0;
+
+    background-color: transparent;
+    border: 0;
+    color: $text-main-cl;
+
+    transition: fill $animation;
+
+    &:hover,
+    &:focus {
+        color: $text-accent-cl;
+    }
+    &__icon {
+        fill: currentColor;
+    }
+
+    &.is-open &__icon {
+        display: none;
+    }
+
+    &__icon--close {
+        display: none;
+        fill: currentColor;
+
+    }
+
+    &.is-open &__icon--close {
+        display: block;
+    }
+
+}
+
+
 .btn {
     min-width: 200px;
     min-height: 50px;
@@ -33,12 +69,14 @@
     }
 
     &__form-footer {
-        display: inline-flex;
+        display: flex;
         align-items: center;
         justify-content: center;
         gap: 10px;
-    }
 
+        margin: 0 auto;
+
+    }  
 }
 
 // BUTTON FILTER 
@@ -69,4 +107,6 @@
                     border-radius: 4px;
                 }
     }
+    
+
     

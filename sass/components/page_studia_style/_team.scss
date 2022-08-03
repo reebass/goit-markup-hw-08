@@ -8,12 +8,16 @@
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+
     /* outline: 1px solid red; */
 }
 
 .team__wrapper {
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 24px;
 }
 
 .team__name {
