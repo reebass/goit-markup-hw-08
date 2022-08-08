@@ -32,47 +32,43 @@
         <a class="logo link" href="./index.html" lang="en"
           ><span class="logo__left-side">Web</span>Studio</a
         >
-        <button class="btn-mobile-menu" type="button" data-menu-button>
+        <button
+          class="btn-mobile-menu js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
           <svg
+            class="btn-mobile-menu__icon"
             width="40"
             height="40"
             aria-label="Переключатель мобильного меню"
           >
-            <use
-              class="btn-mobile-menu__icon"
-              href="./images/icons.svg#mobile-menu"
-            ></use>
-            <use
-              class="btn-mobile-menu__icon--close"
-              href="./images/icons.svg#mobile-menu-close"
-            ></use>
+            <use href="./images/icons.svg#mobile-menu"></use>
           </svg>
         </button>
 
         <!-- menu -->
-        <div class="header__mobile-menu" data-menu>
-          <nav class="header__nav">
-            <ul class="header__list list">
-              <li class="header__item">
-                <a
-                  class="header__link header__link--current link"
-                  href="./index.html"
-                  >Студия</a
-                >
-              </li>
-              <li class="header__item">
-                <a class="header__link link" href="./portfolio.html"
-                  >Портфолио</a
-                >
-              </li>
-              <li class="header__item">
-                <a class="header__link link" href="">Контакты</a>
-              </li>
-            </ul>
-          </nav>
-          <!-- contacts -->
+        <nav class="header__nav">
+          <ul class="header__list list">
+            <li class="header__item">
+              <a
+                class="header__link header__link--current link"
+                href="./index.html"
+                >Студия</a
+              >
+            </li>
+            <li class="header__item">
+              <a class="header__link link" href="./portfolio.html">Портфолио</a>
+            </li>
+            <li class="header__item">
+              <a class="header__link link" href="">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- contacts -->
+        <div class="header__contacts">
           <a
-            class="header__link header__link--contacts header__mail link"
+            class="header__link--contacts header__mail link"
             href="mailto:info@devstudio.com"
             ><svg class="header__icon" width="16" height="12">
               <use href="./images/icons.svg#mail"></use>
@@ -80,7 +76,7 @@
             info@devstudio.com</a
           >
           <a
-            class="header__link header__link--contacts header__phone link"
+            class="header__link--contacts header__phone link"
             href="tel:+380961111111"
             ><svg class="header__icon" width="10" height="16">
               <use href="./images/icons.svg#phone"></use>
@@ -139,15 +135,20 @@
           </ul>
         </div>
       </section>
-      <!-- Чем мы занимаемся -->
+      <!-- About -->
       <section class="about section">
         <div class="container">
           <h2 class="about__title section__title">Чем мы занимаемся</h2>
           <ul class="card-set about__list list">
             <li class="about__item">
               <img
+                srcset="
+                  ./images/index/about/img1_1x.jpg 1x,
+                  ./images/index/about/img1_2x.jpg 2x,
+                  ./images/index/about/img1_3x.jpg 3x
+                "
                 class="about__img"
-                src="./images/index/nabiraet_kod_na_klaviature.jpg"
+                src="./images/index/feature/img1_1x.jpg"
                 alt="Набирает код на клавиатуре за деревянным столом. Код видно на экране и планшете."
                 width="370"
                 height="294"
@@ -156,8 +157,13 @@
             </li>
             <li class="about__item">
               <img
+                srcset="
+                  ./images/index/about/img2_1x.jpg 1x,
+                  ./images/index/about/img2_2x.jpg 2x,
+                  ./images/index/about/img2_3x.jpg 3x
+                "
                 class="about__img"
-                src="./images/index/vubiraet_dizayn_dlya_mobile.jpg"
+                src="./images/index/about/img2_1x.jpg"
                 alt="Смотрит на экран ноутбука и держит у руке телефон, подберает лучший дизайн сайта."
                 width="370"
                 height="294"
@@ -166,8 +172,13 @@
             </li>
             <li class="about__item">
               <img
+                srcset="
+                  ./images/index/about/img3_1x.jpg 1x,
+                  ./images/index/about/img3_2x.jpg 2x,
+                  ./images/index/about/img3_3x.jpg 3x
+                "
                 class="about__img"
-                src="./images/index/vubiraet_cvet_na_planshete.jpg"
+                src="./images/index/about/img3_1x.jpg"
                 alt="При помощи планшета и интерактивной ручки выбирает подходящий цвет в палитре"
                 width="370"
                 height="294"
@@ -184,11 +195,15 @@
           <ul class="team__list card-set list">
             <li class="team__item">
               <img
+                srcset="
+                  ./images/index/team/img1_1x.jpg 1x,
+                  ./images/index/team/img1_2x.jpg 2x,
+                  ./images/index/team/img1_3x.jpg 3x
+                "
                 class="team__img"
-                src="./images/index/igor_demianenko.jpg"
+                src="./images/index/team/img1_1x.jpg"
                 alt="Фото улыбающегося мужчины с русыми волосами в очках и бордовой рубашке."
-                width="270"
-                height="260"
+                width="450"
               />
               <div class="team__wrapper">
                 <h3 class="team__name">Игорь Демьяненко</h3>
@@ -250,11 +265,15 @@
             </li>
             <li class="team__item">
               <img
+                srcset="
+                  ./images/index/team/img2_1x.jpg 1x,
+                  ./images/index/team/img2_2x.jpg 2x,
+                  ./images/index/team/img2_3x.jpg 3x
+                "
                 class="team__img"
-                src="./images/index/olha_repina.jpg"
+                src="./images/index/team/img2_1x.jpg"
                 alt="Фото улыбающейся девушки - блондинки в очках, белой блузке и черном пиджаке."
-                width="270"
-                height="260"
+                width="450"
               />
               <div class="team__wrapper">
                 <h3 class="team__name">Ольга Репина</h3>
@@ -316,11 +335,15 @@
             </li>
             <li class="team__item">
               <img
+                srcset="
+                  ./images/index/team/img3_1x.jpg 1x,
+                  ./images/index/team/img3_2x.jpg 2x,
+                  ./images/index/team/img3_3x.jpg 3x
+                "
                 class="team__img"
-                src="./images/index/nikolay_tarasov.jpg"
+                src="./images/index/team/img3_1x.jpg"
                 alt="Фото улыбающегося мужчины с русыми волосами в белой рубашке"
-                width="270"
-                height="260"
+                width="450"
               />
               <div class="team__wrapper">
                 <h3 class="team__name">Николай Тарасов</h3>
@@ -382,11 +405,15 @@
             </li>
             <li class="team__item">
               <img
+                srcset="
+                  ./images/index/team/img4_1x.jpg 1x,
+                  ./images/index/team/img4_2x.jpg 2x,
+                  ./images/index/team/img4_3x.jpg 3x
+                "
                 class="team__img"
-                src="./images/index/mihail_yarmakov.jpg"
+                src="./images/index/team/img4_1x.jpg"
                 alt="Фото мужчины с черными волосами и бородой, в очках и черной футболке"
-                width="270"
-                height="260"
+                width="450"
               />
               <div class="team__wrapper">
                 <h3 class="team__name">Михаил Ермаков</h3>
@@ -707,6 +734,67 @@
         </form>
       </div>
     </div>
+
+    <!-- Mobile menu -->
+
+    <div class="mobile-menu js-menu-container" id="mobile-menu">
+      <button class="btn-mobile-menu btn-mobile-menu--close js-close-menu">
+        <svg width="40" height="40">
+          <use
+            class="btn-mobile-menu__icon"
+            href="./images/icons.svg#mobile-menu-close"
+          ></use>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu__list list">
+        <li class="mobile-menu__item">
+          <a
+            href="./index.html"
+            class="mobile-menu__link mobile-menu__link--current link"
+            >Студия</a
+          >
+        </li>
+        <li class="mobile-menu__item">
+          <a href="./portfolio.html" class="mobile-menu__link link"
+            >Портфолио</a
+          >
+        </li>
+        <li class="mobile-menu__item">
+          <a href="" class="mobile-menu__link link">Контакты</a>
+        </li>
+      </ul>
+
+      <a class="mobile-menu__phone link" href="tel:+380961111111">
+        +38 096 111 11 11</a
+      >
+
+      <a class="mobile-menu__mail link" href="mailto:info@devstudio.com">
+        info@devstudio.com</a
+      >
+
+      <ul class="mobile-menu-social__list list">
+        <li class="mobile-menu-social__item">
+          <a href="" class="mobile-menu-social__link link">Instagram</a>
+        </li>
+        <li class="mobile-menu-social__item">
+          <a href="" class="mobile-menu-social__link link">Twitter</a>
+        </li>
+        <li class="mobile-menu-social__item">
+          <a href="" class="mobile-menu-social__link link">Facebook</a>
+        </li>
+        <li class="mobile-menu-social__item">
+          <a href="" class="mobile-menu-social__link link">Linkedin</a>
+        </li>
+      </ul>
+    </div>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
     <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
     <script src="./js/header-scroll.js"></script>

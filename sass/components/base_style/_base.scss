@@ -4,9 +4,11 @@ body {
 }
 
 .main {
-    
-    margin-top: 60px;
-    // margin-top: 80px;
+    margin-top: 60px; 
+
+    @media screen and (min-width: 768px) {
+        margin-top: 80px;
+   }
 }
 
 .no-scroll {
@@ -23,6 +25,14 @@ body {
         width: 480px;    
     }
 
+    @media screen and (min-width: 768px) {
+        width: 768px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 1200px;
+    }
+
     /* outline: 2px solid red;
   outline-offset: -2px; */
 }
@@ -31,8 +41,11 @@ body {
      padding-top: 60px;
      padding-bottom: 60px;
 
-    // padding-top: 94px;
-    // padding-bottom: 94px;
+     @media screen and (min-width: 1200px) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+     }
+
  }
 
 
@@ -57,12 +70,15 @@ body {
     text-transform: uppercase;
 }
 
-// .card-set {
-//     display: flex;
-//     gap: 30px;
-//     flex-wrap: wrap;
-//     align-items: center;
-// }
+@media screen and (min-width: 768px) {
+
+    .card-set {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    align-items: center;
+    }
+}
 
 .visually-hidden {
     position: absolute;

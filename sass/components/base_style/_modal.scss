@@ -4,12 +4,14 @@
     left: 0;
     z-index: 1000;
 
+    padding: 93px 15px 15px 15px;
     width: 100%;
     height: 100%;
 
     background-color: rgba(0, 0, 0, 0.2);
 
     transition: opacity $animation, visibility $animation;
+    overflow-y: scroll;
 
     &.is-hidden {
             opacity: 0;
@@ -21,18 +23,30 @@
 
 
 .modal-window {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1);
-    width: 528px;
-    height: 581px;
+    padding: 40px;
     background-color: $text-white-cl;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 
     transition: transform $animation-modal, opacity $animation-modal;
+    
+
+    @media screen and (min-width: 480px) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1);
+
+        width: 450px;
+        height: 609px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 528px;
+        height: 581px;
+        
+    }
 
     .backdrop.is-hidden & {
             opacity: 0;
@@ -44,14 +58,14 @@
 
 .close-btn {
     position: absolute;
-    top: 8px;
-    right: 8px;
-    padding: 0;
+    top: 101px;
+    right: 23px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
+    padding: 0;
     width: 30px;
     height: 30px;
 
@@ -59,6 +73,13 @@
     border: 1px solid rgba(0, 0, 0, 0.1);
     background-color: $text-white-cl;
     cursor: pointer;
+
+    @media screen and (min-width: 480px) {
+        
+        top: 8px;
+        right: 8px;
+        
+    }
 
     transition: color $animation-modal;
     &:hover,
@@ -74,21 +95,24 @@
 
 // MODAL FORM 
 
-.form {
-    margin: 40px;
-}
 
 .form__title {
     display: block;
 
     font-weight: 700;
     font-size: 20px;
-    line-height: calc(23 / 20);
+    line-height: calc(30 / 20);
     text-align: center;
     letter-spacing: 0.03em;
     color: $text-main-cl;
 
     margin-bottom: 12px;
+
+    @media screen and (min-width: 1200px) {
+        font-size: 20px;
+        line-height: calc(23 / 20);
+    }
+    
 }
 
 .form__group-warp {
@@ -205,12 +229,17 @@
 
 .checkbox__text {
     font-weight: 400;
-    font-size: 14px;
-    line-height: calc(24 / 14);
+    font-size: 12px;
+    line-height: calc(14 / 12);
     letter-spacing: 0.03em;
     text-align: center;
 
     color: $text-second-cl;
+
+    @media screen and (min-width: 1200px) {
+        font-size: 14px;
+        line-height: calc(24 / 14);
+    }
 }
 
 .checkbox__link {
@@ -226,7 +255,7 @@
         width: 100%;
         background-color: $text-accent-cl;
         position: absolute;
-        bottom: 5px;
+        bottom: 0;
     }
 }
 

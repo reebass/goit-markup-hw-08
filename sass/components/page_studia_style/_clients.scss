@@ -13,11 +13,19 @@
     align-items: center;
     justify-content: center;
     padding: 15px 0;
-    width: calc((100% - 30px) / 2);
+    flex-basis: calc((100% - 30px) / 2);
 
     border: 1px solid $icon-color;
     border-radius: 4px;
     color: $icon-color;
+
+    @media screen and (min-width: 768px){
+        flex-basis: calc((100% - 60px) / 3);
+    }
+
+    @media screen and (min-width: 1200px) {
+        flex-basis: calc((100% - 150px) / 6);
+    }
 
     &:hover,
     &:focus {

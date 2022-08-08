@@ -1,4 +1,19 @@
 .feature__item {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+            flex-basis: 354px;
+
+            &:nth-child(2) {
+                    height: 251px;
+                }
+    }
+
+    @media screen and (min-width: 1200px) {
+        flex-basis: 270px;
+        
+    }
+
+
+
     &::before {
         display: block;
         content: "";
@@ -10,9 +25,11 @@
         border-radius: 4px;
         margin-bottom: 30px;
     }
+    @media screen and (max-width: 767px) {
 
-    &:not(:last-child) {
-        margin-bottom: 30px;
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
     }
 
     &:nth-child(1)::before {

@@ -32,6 +32,21 @@
         <a class="logo link" href="./index.html" lang="en"
           ><span class="logo__left-side">Web</span>Studio</a
         >
+        <button
+          class="btn-mobile-menu js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg
+            class="btn-mobile-menu__icon"
+            width="40"
+            height="40"
+            aria-label="Переключатель мобильного меню"
+          >
+            <use href="./images/icons.svg#mobile-menu"></use>
+          </svg>
+        </button>
+
         <!-- menu -->
         <nav class="header__nav">
           <ul class="header__list list">
@@ -51,22 +66,24 @@
           </ul>
         </nav>
         <!-- contacts -->
-        <a
-          class="header__link header__link--contacts header__mail link"
-          href="mailto:info@devstudio.com"
-          ><svg class="header__icon" width="16" height="12">
-            <use href="./images/icons.svg#mail"></use>
-          </svg>
-          info@devstudio.com</a
-        >
-        <a
-          class="header__link header__link--contacts header__phone link"
-          href="tel:+380961111111"
-          ><svg class="header__icon" width="10" height="16">
-            <use href="./images/icons.svg#phone"></use>
-          </svg>
-          +38 096 111 11 11</a
-        >
+        <div class="header__contacts">
+          <a
+            class="header__link--contacts header__mail link"
+            href="mailto:info@devstudio.com"
+            ><svg class="header__icon" width="16" height="12">
+              <use href="./images/icons.svg#mail"></use>
+            </svg>
+            info@devstudio.com</a
+          >
+          <a
+            class="header__link--contacts header__phone link"
+            href="tel:+380961111111"
+            ><svg class="header__icon" width="10" height="16">
+              <use href="./images/icons.svg#phone"></use>
+            </svg>
+            +38 096 111 11 11</a
+          >
+        </div>
       </div>
     </header>
     <!-- Основной контент страницы -->
@@ -98,20 +115,37 @@
           <ul class="products card-set list">
             <li class="products__item">
               <a class="products__link link" href="">
-                <img
-                  class="products__img"
-                  src="./images/portfolio/1.jpg"
-                  alt=""
-                  width="370"
-                  height="294"
-                />
-                <div class="products__overlay">
-                  <p class="products__desc">
-                    Ресурс предлагает комплексные предложения с разным уровнем
-                    функционала и сервисов. Все это позволит посетителю получить
-                    исчерпывающие сведения о компании или частном лице.
-                  </p>
-                </div>
+                <picture class="products_img-wrapper">
+                  <source
+                    srcset="
+                      ./images/portfolio/mobile/img1x-1.jpg 1x,
+                      ./images/portfolio/mobile/img2x-1.jpg 2x,
+                      ./images/portfolio/mobile/img3x-1.jpg 3x
+                    "
+                    width="450"
+                    media="(max-width: 768px)"
+                  />
+                  <img
+                    srcset="
+                      ./images/portfolio/tablet_desc/img1x-1.jpg 1x,
+                      ./images/portfolio/tablet_desc/img2x-1.jpg 2x,
+                      ./images/portfolio/tablet_desc/img3x-1.jpg 3x
+                    "
+                    class="products__img"
+                    src="./images/portfolio/tablet_desc/img1x-1.jpg"
+                    alt=""
+                    width="370"
+                    height="294"
+                  />
+                  <div class="products__overlay">
+                    <p class="products__desc">
+                      Ресурс предлагает комплексные предложения с разным уровнем
+                      функционала и сервисов. Все это позволит посетителю
+                      получить исчерпывающие сведения о компании или частном
+                      лице.
+                    </p>
+                  </div>
+                </picture>
                 <div class="products__wrapper">
                   <h2 class="products__name">Технокряк</h2>
                   <p class="products__direction">Веб-сайт</p>
@@ -120,20 +154,38 @@
             </li>
             <li class="products__item">
               <a class="products__link link" href="">
-                <img
-                  class="products__img"
-                  src="./images/portfolio/2.jpg"
-                  alt=""
-                  width="370"
-                  height="294"
-                />
-                <div class="products__overlay">
-                  <p class="products__desc">
-                    Ресурс предлагает комплексные предложения с разным уровнем
-                    функционала и сервисов. Все это позволит посетителю получить
-                    исчерпывающие сведения о компании или частном лице.
-                  </p>
-                </div>
+                <picture class="products_img-wrapper">
+                  <source
+                    srcset="
+                      ./images/portfolio/mobile/img1x-2.jpg 1x,
+                      ./images/portfolio/mobile/img2x-2.jpg 2x,
+                      ./images/portfolio/mobile/img3x-2.jpg 3x
+                    "
+                    width="450"
+                    media="(max-width: 768px)"
+                  />
+                  <img
+                    srcset="
+                      ./images/portfolio/tablet_desc/img1x-2.jpg 1x,
+                      ./images/portfolio/tablet_desc/img2x-2.jpg 2x,
+                      ./images/portfolio/tablet_desc/img3x-2.jpg 3x
+                    "
+                    class="products__img"
+                    src="./images/portfolio/tablet_desc/img1x-2.jpg"
+                    alt=""
+                    width="370"
+                    height="294"
+                  />
+                  <div class="products__overlay">
+                    <p class="products__desc">
+                      Ресурс предлагает комплексные предложения с разным уровнем
+                      функционала и сервисов. Все это позволит посетителю
+                      получить исчерпывающие сведения о компании или частном
+                      лице.
+                    </p>
+                  </div>
+                </picture>
+
                 <div class="products__wrapper">
                   <h2 class="products__name">
                     Постер <span lang="en">New Orlean vs Golden Star</span>
@@ -144,20 +196,38 @@
             </li>
             <li class="products__item">
               <a class="products__link link" href="">
-                <img
-                  class="products__img"
-                  src="./images/portfolio/3.jpg"
-                  alt=""
-                  width="370"
-                  height="294"
-                />
-                <div class="products__overlay">
-                  <p class="products__desc">
-                    Ресурс предлагает комплексные предложения с разным уровнем
-                    функционала и сервисов. Все это позволит посетителю получить
-                    исчерпывающие сведения о компании или частном лице.
-                  </p>
-                </div>
+                <picture class="products_img-wrapper">
+                  <source
+                    srcset="
+                      ./images/portfolio/mobile/img1x-3.jpg 1x,
+                      ./images/portfolio/mobile/img2x-3.jpg 2x,
+                      ./images/portfolio/mobile/img3x-3.jpg 3x
+                    "
+                    width="450"
+                    media="(max-width: 768px)"
+                  />
+                  <img
+                    srcset="
+                      ./images/portfolio/tablet_desc/img1x-3.jpg 1x,
+                      ./images/portfolio/tablet_desc/img2x-3.jpg 2x,
+                      ./images/portfolio/tablet_desc/img3x-3.jpg 3x
+                    "
+                    class="products__img"
+                    src="./images/portfolio/tablet_desc/img1x-3.jpg"
+                    alt=""
+                    width="370"
+                    height="294"
+                  />
+                  <div class="products__overlay">
+                    <p class="products__desc">
+                      Ресурс предлагает комплексные предложения с разным уровнем
+                      функционала и сервисов. Все это позволит посетителю
+                      получить исчерпывающие сведения о компании или частном
+                      лице.
+                    </p>
+                  </div>
+                </picture>
+
                 <div class="products__wrapper">
                   <h2 class="products__name">
                     Ресторан <span lang="en">Seafood</span>
@@ -168,20 +238,38 @@
             </li>
             <li class="products__item">
               <a class="products__link link" href="">
-                <img
-                  class="products__img"
-                  src="./images/portfolio/4.jpg"
-                  alt=""
-                  width="370"
-                  height="294"
-                />
-                <div class="products__overlay">
-                  <p class="products__desc">
-                    Ресурс предлагает комплексные предложения с разным уровнем
-                    функционала и сервисов. Все это позволит посетителю получить
-                    исчерпывающие сведения о компании или частном лице.
-                  </p>
-                </div>
+                <picture class="products_img-wrapper">
+                  <source
+                    srcset="
+                      ./images/portfolio/mobile/img1x-4.jpg 1x,
+                      ./images/portfolio/mobile/img2x-4.jpg 2x,
+                      ./images/portfolio/mobile/img3x-4.jpg 3x
+                    "
+                    width="450"
+                    media="(max-width: 768px)"
+                  />
+                  <img
+                    srcset="
+                      ./images/portfolio/tablet_desc/img1x-4.jpg 1x,
+                      ./images/portfolio/tablet_desc/img2x-4.jpg 2x,
+                      ./images/portfolio/tablet_desc/img3x-4.jpg 3x
+                    "
+                    class="products__img"
+                    src="./images/portfolio/tablet_desc/img1x-4.jpg"
+                    alt=""
+                    width="370"
+                    height="294"
+                  />
+                  <div class="products__overlay">
+                    <p class="products__desc">
+                      Ресурс предлагает комплексные предложения с разным уровнем
+                      функционала и сервисов. Все это позволит посетителю
+                      получить исчерпывающие сведения о компании или частном
+                      лице.
+                    </p>
+                  </div>
+                </picture>
+
                 <div class="products__wrapper">
                   <h2 class="products__name">
                     Проект <span lang="en">Prime</span>
@@ -192,20 +280,38 @@
             </li>
             <li class="products__item">
               <a class="products__link link" href="">
-                <img
-                  class="products__img"
-                  src="./images/portfolio/5.jpg"
-                  alt=""
-                  width="370"
-                  height="294"
-                />
-                <div class="products__overlay">
-                  <p class="products__desc">
-                    Ресурс предлагает комплексные предложения с разным уровнем
-                    функционала и сервисов. Все это позволит посетителю получить
-                    исчерпывающие сведения о компании или частном лице.
-                  </p>
-                </div>
+                <picture class="products_img-wrapper">
+                  <source
+                    srcset="
+                      ./images/portfolio/mobile/img1x-5.jpg 1x,
+                      ./images/portfolio/mobile/img2x-5.jpg 2x,
+                      ./images/portfolio/mobile/img3x-5.jpg 3x
+                    "
+                    width="450"
+                    media="(max-width: 768px)"
+                  />
+                  <img
+                    srcset="
+                      ./images/portfolio/tablet_desc/img1x-5.jpg 1x,
+                      ./images/portfolio/tablet_desc/img2x-5.jpg 2x,
+                      ./images/portfolio/tablet_desc/img3x-5.jpg 3x
+                    "
+                    class="products__img"
+                    src="./images/portfolio/tablet_desc/img1x-5.jpg"
+                    alt=""
+                    width="370"
+                    height="294"
+                  />
+                  <div class="products__overlay">
+                    <p class="products__desc">
+                      Ресурс предлагает комплексные предложения с разным уровнем
+                      функционала и сервисов. Все это позволит посетителю
+                      получить исчерпывающие сведения о компании или частном
+                      лице.
+                    </p>
+                  </div>
+                </picture>
+
                 <div class="products__wrapper">
                   <h2 class="products__name">Проект Boxes</h2>
                   <p class="products__direction">Приложение</p>
@@ -214,20 +320,38 @@
             </li>
             <li class="products__item">
               <a class="products__link link" href="">
-                <img
-                  class="products__img"
-                  src="./images/portfolio/6.jpg"
-                  alt=""
-                  width="370"
-                  height="294"
-                />
-                <div class="products__overlay">
-                  <p class="products__desc">
-                    Ресурс предлагает комплексные предложения с разным уровнем
-                    функционала и сервисов. Все это позволит посетителю получить
-                    исчерпывающие сведения о компании или частном лице.
-                  </p>
-                </div>
+                <picture class="products_img-wrapper">
+                  <source
+                    srcset="
+                      ./images/portfolio/mobile/img1x-6.jpg 1x,
+                      ./images/portfolio/mobile/img2x-6.jpg 2x,
+                      ./images/portfolio/mobile/img3x-6.jpg 3x
+                    "
+                    width="450"
+                    media="(max-width: 768px)"
+                  />
+                  <img
+                    srcset="
+                      ./images/portfolio/tablet_desc/img1x-6.jpg 1x,
+                      ./images/portfolio/tablet_desc/img2x-6.jpg 2x,
+                      ./images/portfolio/tablet_desc/img3x-6.jpg 3x
+                    "
+                    class="products__img"
+                    src="./images/portfolio/tablet_desc/img1x-6.jpg"
+                    alt=""
+                    width="370"
+                    height="294"
+                  />
+                  <div class="products__overlay">
+                    <p class="products__desc">
+                      Ресурс предлагает комплексные предложения с разным уровнем
+                      функционала и сервисов. Все это позволит посетителю
+                      получить исчерпывающие сведения о компании или частном
+                      лице.
+                    </p>
+                  </div>
+                </picture>
+
                 <div class="products__wrapper">
                   <h2 class="products__name" lang="en">
                     Inspiration has no Borders
@@ -238,20 +362,38 @@
             </li>
             <li class="products__item">
               <a class="products__link link" href="">
-                <img
-                  class="products__img"
-                  src="./images/portfolio/7.jpg"
-                  alt=""
-                  width="370"
-                  height="294"
-                />
-                <div class="products__overlay">
-                  <p class="products__desc">
-                    Ресурс предлагает комплексные предложения с разным уровнем
-                    функционала и сервисов. Все это позволит посетителю получить
-                    исчерпывающие сведения о компании или частном лице.
-                  </p>
-                </div>
+                <picture class="products_img-wrapper">
+                  <source
+                    srcset="
+                      ./images/portfolio/mobile/img1x-7.jpg 1x,
+                      ./images/portfolio/mobile/img2x-7.jpg 2x,
+                      ./images/portfolio/mobile/img3x-7.jpg 3x
+                    "
+                    width="450"
+                    media="(max-width: 768px)"
+                  />
+                  <img
+                    srcset="
+                      ./images/portfolio/tablet_desc/img1x-7.jpg 1x,
+                      ./images/portfolio/tablet_desc/img2x-7.jpg 2x,
+                      ./images/portfolio/tablet_desc/img3x-7.jpg 3x
+                    "
+                    class="products__img"
+                    src="./images/portfolio/tablet_desc/img1x-7.jpg"
+                    alt=""
+                    width="370"
+                    height="294"
+                  />
+                  <div class="products__overlay">
+                    <p class="products__desc">
+                      Ресурс предлагает комплексные предложения с разным уровнем
+                      функционала и сервисов. Все это позволит посетителю
+                      получить исчерпывающие сведения о компании или частном
+                      лице.
+                    </p>
+                  </div>
+                </picture>
+
                 <div class="products__wrapper">
                   <h2 class="products__name">
                     Издание<span lang="en">Li mited Edition</span>
@@ -262,20 +404,38 @@
             </li>
             <li class="products__item">
               <a class="products__link link" href="">
-                <img
-                  class="products__img"
-                  src="./images/portfolio/8.jpg"
-                  alt=""
-                  width="370"
-                  height="294"
-                />
-                <div class="products__overlay">
-                  <p class="products__desc">
-                    Ресурс предлагает комплексные предложения с разным уровнем
-                    функционала и сервисов. Все это позволит посетителю получить
-                    исчерпывающие сведения о компании или частном лице.
-                  </p>
-                </div>
+                <picture class="products_img-wrapper">
+                  <source
+                    srcset="
+                      ./images/portfolio/mobile/img1x-8.jpg 1x,
+                      ./images/portfolio/mobile/img2x-8.jpg 2x,
+                      ./images/portfolio/mobile/img3x-8.jpg 3x
+                    "
+                    width="450"
+                    media="(max-width: 768px)"
+                  />
+                  <img
+                    srcset="
+                      ./images/portfolio/tablet_desc/img1x-8.jpg 1x,
+                      ./images/portfolio/tablet_desc/img2x-8.jpg 2x,
+                      ./images/portfolio/tablet_desc/img3x-8.jpg 3x
+                    "
+                    class="products__img"
+                    src="./images/portfolio/tablet_desc/img1x-8.jpg"
+                    alt=""
+                    width="370"
+                    height="294"
+                  />
+                  <div class="products__overlay">
+                    <p class="products__desc">
+                      Ресурс предлагает комплексные предложения с разным уровнем
+                      функционала и сервисов. Все это позволит посетителю
+                      получить исчерпывающие сведения о компании или частном
+                      лице.
+                    </p>
+                  </div>
+                </picture>
+
                 <div class="products__wrapper">
                   <h2 class="products__name">
                     Проект<span lang="en">LAB</span>
@@ -286,20 +446,38 @@
             </li>
             <li class="products__item">
               <a class="products__link link" href="">
-                <img
-                  class="products__img"
-                  src="./images/portfolio/9.jpg"
-                  alt=""
-                  width="370"
-                  height="294"
-                />
-                <div class="products__overlay">
-                  <p class="products__desc">
-                    Ресурс предлагает комплексные предложения с разным уровнем
-                    функционала и сервисов. Все это позволит посетителю получить
-                    исчерпывающие сведения о компании или частном лице.
-                  </p>
-                </div>
+                <picture class="products_img-wrapper">
+                  <source
+                    srcset="
+                      ./images/portfolio/mobile/img1x-9.jpg 1x,
+                      ./images/portfolio/mobile/img2x-9.jpg 2x,
+                      ./images/portfolio/mobile/img3x-9.jpg 3x
+                    "
+                    width="450"
+                    media="(max-width: 768px)"
+                  />
+                  <img
+                    srcset="
+                      ./images/portfolio/tablet_desc/img1x-9.jpg 1x,
+                      ./images/portfolio/tablet_desc/img2x-9.jpg 2x,
+                      ./images/portfolio/tablet_desc/img3x-9.jpg 3x
+                    "
+                    class="products__img"
+                    src="./images/portfolio/tablet_desc/img1x-9.jpg"
+                    alt=""
+                    width="370"
+                    height="294"
+                  />
+                  <div class="products__overlay">
+                    <p class="products__desc">
+                      Ресурс предлагает комплексные предложения с разным уровнем
+                      функционала и сервисов. Все это позволит посетителю
+                      получить исчерпывающие сведения о компании или частном
+                      лице.
+                    </p>
+                  </div>
+                </picture>
+
                 <div class="products__wrapper">
                   <h2 class="products__name" lang="en">Growing Business</h2>
                   <p class="products__direction">Приложение</p>
@@ -311,7 +489,7 @@
       </section>
     </main>
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer section">
       <div class="container footer_container">
         <div>
           <a class="logo footer__logo link" href="./index.html" lang="en"
@@ -407,6 +585,66 @@
         </form>
       </div>
     </footer>
+
+    <!-- Mobile menu -->
+
+    <div class="mobile-menu js-menu-container" id="mobile-menu">
+      <button class="btn-mobile-menu btn-mobile-menu--close js-close-menu">
+        <svg width="40" height="40">
+          <use
+            class="btn-mobile-menu__icon"
+            href="./images/icons.svg#mobile-menu-close"
+          ></use>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu__list list">
+        <li class="mobile-menu__item">
+          <a href="./index.html" class="mobile-menu__link link">Студия</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a
+            href="./portfolio.html"
+            class="mobile-menu__link mobile-menu__link--current link"
+            >Портфолио</a
+          >
+        </li>
+        <li class="mobile-menu__item">
+          <a href="" class="mobile-menu__link link">Контакты</a>
+        </li>
+      </ul>
+
+      <a class="mobile-menu__phone link" href="tel:+380961111111">
+        +38 096 111 11 11</a
+      >
+
+      <a class="mobile-menu__mail link" href="mailto:info@devstudio.com">
+        info@devstudio.com</a
+      >
+
+      <ul class="mobile-menu-social__list list">
+        <li class="mobile-menu-social__item">
+          <a href="" class="mobile-menu-social__link link">Instagram</a>
+        </li>
+        <li class="mobile-menu-social__item">
+          <a href="" class="mobile-menu-social__link link">Twitter</a>
+        </li>
+        <li class="mobile-menu-social__item">
+          <a href="" class="mobile-menu-social__link link">Facebook</a>
+        </li>
+        <li class="mobile-menu-social__item">
+          <a href="" class="mobile-menu-social__link link">Linkedin</a>
+        </li>
+      </ul>
+    </div>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/header-scroll.js"></script>
   </body>
 </html>
