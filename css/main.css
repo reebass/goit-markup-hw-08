@@ -500,6 +500,11 @@ body {
   position: absolute;
   bottom: 0;
 }
+@media screen and (min-width: 1200px) {
+  .checkbox__link::after {
+    bottom: 4px;
+  }
+}
 
 .logo {
   display: block;
