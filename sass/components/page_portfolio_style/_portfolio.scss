@@ -16,6 +16,13 @@
 }
 
 .products__item {
+
+    &:not(:last-child) {
+        @media screen and (max-width: 767px) {
+        margin-bottom: 30px;
+        }
+    }
+
     @media screen and (min-width: 768px) and (max-width: 1199px) {
         flex-basis: calc((100% - 30px) / 2);
 
@@ -34,8 +41,7 @@
     transition: box-shadow $animation;
     overflow: hidden;
     height: 100%;
-    border: 1px solid $border-color;
-    border-top: none;
+
 
     &:hover,
     &:focus {
@@ -99,6 +105,14 @@
     z-index: 10;
     padding: 20px 24px;
     background-color: $text-white-cl;
+    border: 1px solid $border-color;
+    border-top: none;
+
+    &--first {
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+           height: 146px;
+        }
+    }
     
 }
 
