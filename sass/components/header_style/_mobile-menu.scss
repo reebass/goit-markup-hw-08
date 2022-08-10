@@ -12,7 +12,7 @@
 
     transform: translateY(-200%);
     transition: transform $animation-modal;
-    overflow-y: scroll;
+    overflow-y: auto;
 
     &.is-open {
         transform: translateY(0);
@@ -20,8 +20,11 @@
    
 }
 
-.mobile-menu__list {
-    margin-bottom: 306px;
+.mobile-menu__bottom-side {
+    position: absolute;
+    bottom: 48px;
+    left: 0;
+    padding: 0 10px 0 40px;
 }
 
 .mobile-menu__item:not(:last-child) {
