@@ -20,15 +20,41 @@
    
 }
 
-.mobile-menu__bottom-side {
-    position: absolute;
-    bottom: 48px;
-    left: 0;
-    padding: 0 10px 0 40px;
+.mobile-menu__wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
+@media screen and (max-width: 450px) {
+    
+
+    .mobile-menu__list {
+        display: flex;
+        flex-direction: column;
+        height: 33%;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .mobile-menu__bottom-side {
+        display: flex;
+        flex-direction: column;
+        height: 33%;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+}
+
+
 .mobile-menu__item:not(:last-child) {
-    margin-bottom: 32px;
+    margin-bottom: 15px;
+    
+    @media screen and (min-width: 450px) {
+        margin-bottom: 32px;
+    }
 }
 
 .mobile-menu__link {
@@ -41,11 +67,17 @@
     &--current {
         color: $text-accent-cl;
     }
+
+    @media screen and (max-width: 450px) {
+        font-size: 34px;
+        line-height: calc(40 / 34);
+        
+    }
 }
 
 .mobile-menu__phone {
     display: block;
-    margin-bottom: 32px;
+    
 
 
     font-weight: 500;
@@ -54,6 +86,13 @@
     letter-spacing: 0.02em;
 
     color: $text-accent-cl;
+    margin-bottom: 32px;
+
+    @media screen and (max-width: 450px) {
+            font-size: 30px;
+            line-height: calc(38 / 30);
+            margin-bottom: 15px;
+        }
 
 }
 
@@ -67,6 +106,12 @@
     letter-spacing: 0.02em;
 
     color: $text-second-cl;
+
+    @media screen and (max-width: 450px) {
+            font-size: 22px;
+            line-height: calc(26 / 22);
+            margin-bottom: 42px;
+        }
 }
 
 
@@ -74,9 +119,7 @@
     display: flex;
     align-items: center;
     gap: 10px; 
-    flex-wrap: wrap;
-
-    
+    flex-wrap: wrap;    
 
     font-weight: 500;
     font-size: 18px;
@@ -84,6 +127,12 @@
     letter-spacing: 0.02em;
     
     color: $text-accent-cl;
+
+    @media screen and (max-width: 450px) {
+            font-size: 16px;
+            line-height: calc(22 / 16);
+    
+        }
 }
 
 
